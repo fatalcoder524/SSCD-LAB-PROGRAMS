@@ -1,9 +1,15 @@
 -------------------------------------------------
 //1a
 https://raw.githubusercontent.com/fatalcoder524/SSCD-LAB-PROGRAMS/master/1a.c
+lex filename
+cc lex.yy.c
+control+d to stop get full out put after giving input
 -----------------------------
 //1b
 https://raw.githubusercontent.com/fatalcoder524/SSCD-LAB-PROGRAMS/master/1b.c
+yacc -d filename
+lex filename
+cc y.tab.c lex.yy.c
 --------------------------
 //2
 https://raw.githubusercontent.com/fatalcoder524/SSCD-LAB-PROGRAMS/master/2.c
