@@ -12,32 +12,32 @@ void main()
 		fscanf(fp1,"%s%s%s%s",result,arg1,op,arg2);     
 		if(strcmp(op,"+")==0)     
 		{       
-			fprintf(fp2,"\nMOV R0,%s",arg1);        
-			fprintf(fp2,"\nADD R0,%s",arg2);       
-			fprintf(fp2,"\nMOV %s,R0",result);     
+			fprintf(fp2,"\nLDF R0,%s",arg1);        
+			fprintf(fp2,"\nADDF R0,%s",arg2);       
+			fprintf(fp2,"\nSTF %s,R0",result);     
 		}      
 		if(strcmp(op,"*")==0)     
 		{      
-			fprintf(fp2,"\nMOV R0,%s",arg1);       
-			fprintf(fp2,"\nMUL R0,%s",arg2);       
-			fprintf(fp2,"\nMOV %s,R0",result);     
+			fprintf(fp2,"\nLDF R0,%s",arg1);        
+			fprintf(fp2,"\nMULF R0,%s",arg2);       
+			fprintf(fp2,"\nSTF %s,R0",result);     
 		}     
 		if(strcmp(op,"-")==0)     
 		{       
-			fprintf(fp2,"\nMOV R0,%s",arg1);       
-			fprintf(fp2,"\nSUB R0,%s",arg2);       
-			fprintf(fp2,"\nMOV %s,R0",result);     
+			fprintf(fp2,"\nLDF R0,%s",arg1);        
+			fprintf(fp2,"\nSUBF R0,%s",arg2);       
+			fprintf(fp2,"\nSTF %s,R0",result);     
 		}        
 		if(strcmp(op,"/")==0) 
    		{       
-			fprintf(fp2,"\nMOV R0,%s",arg1);       
-			fprintf(fp2,"\nDIV R0,%s",arg2);       
-			fprintf(fp2,"\nMOV %s,R0",result);     
+			fprintf(fp2,"\nLDF R0,%s",arg1);        
+			fprintf(fp2,"\nDIVF R0,%s",arg2);       
+			fprintf(fp2,"\nSTF %s,R0",result);     
 		} 
 		if(strcmp(op,"=")==0)     
 		{       
-			fprintf(fp2,"\nMOV R0,%s",arg1);       
-			fprintf(fp2,"\nMOV %s,R0",result);     
+			fprintf(fp2,"\nLDF R0,%s",arg1);     
+			fprintf(fp2,"\nSTF %s,R0",result);     
 		}     
 	}     
 	fclose(fp1);     
