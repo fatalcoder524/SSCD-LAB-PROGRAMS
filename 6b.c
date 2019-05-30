@@ -8,7 +8,7 @@ extern yylval;
 [ \t] ;
 [\+\-\*\/\=\<\>] {printf("operation is %s\n",yytext); return OP;}
 [0-9]+ {yylval=atoi(yytext);printf("number is %d\n",yylval); return DIGIT;}
-int|char|bool|float|void|for|do|while|if|else|return|"#include<"[a-zA-Z\.]*">" {printf("keyword is %s\n",yytext); return KEY;}
+int|char|double|bool|float|void|for|do|while|if|else|return|"#include<"[a-zA-Z\.]*">" {printf("keyword is %s\n",yytext); return KEY;}
 [a-zA-Z0-9\*\[\]]+ {printf("identifier is %s\n",yytext); return ID;}
 . ;
 %%
